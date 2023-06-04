@@ -1,0 +1,57 @@
+<html>
+    <title>JS Task 10</title>
+    <body>
+        This is the array being used<p id="demo1"></p>
+        Pop method <br>Click here to pop the last element <button type="button" onclick="func1()">Pop</button><p id="pop"></p>
+        Pushing 8 <br><input placeholder="Enter value to push" type="text" id="psh"><button type="button" onclick="func2()">Push</button><p id="push"></p>
+        Shift method <br><button type="button" onclick="func3()">Shift</button><p id="shift"></p>
+        Unshift method <br><button type="button" onclick="func4()">Unshift</button><p id="unshift"></p>
+        Length method <br><button type="button" onclick="func5()">Length</button><p id="len"></p>
+        Concat method<br>Press the button to concat the above array with <div id="arr2"></div><button type="button" onclick="func6()">Concat</button><p id="arr3"></p>
+        slice method<br><input placeholder="Enter index from which the array must be sliced" type="number" id="sli"><button type="button" onclick="func7()">Slice</button><p id="slice"></p>
+        <script>
+            const arr = ["1","2","3","4","5"];
+            document.getElementById("demo1").innerHTML = arr;
+            const arr2 = ["111","112","113"];
+                document.getElementById("arr2").innerHTML = arr2;
+            function func1()
+            {
+                
+                arr.pop();
+                document.getElementById("pop").innerHTML = arr;
+            }
+            function func2()
+            {
+                let x = document.getElementById("psh").value;
+                arr.push(x)
+                document.getElementById("push").innerHTML = arr;
+            }
+            
+            function func3()
+            {arr.shift()
+            document.getElementById("shift").innerHTML = arr;}
+            function func4()
+            {arr.unshift()
+            document.getElementById("unshift").innerHTML = arr;}
+            
+            function func5()
+            {
+                document.getElementById("len").innerHTML = arr.length;
+            }
+            
+            function func6()
+            {
+                
+                const ar3 = arr.concat(arr2);
+                document.getElementById("arr3").innerHTML = ar3;
+            }
+            function func7()
+            {
+                let x = parseInt(document.getElementById("sli").value);
+                arr.slice(x);
+                document.getElementById("slice").innerHTML = arr;
+            }
+            
+        </script>
+    </body>
+</html>
